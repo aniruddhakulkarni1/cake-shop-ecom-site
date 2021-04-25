@@ -29,8 +29,8 @@
 				return cookieValue;
 			}
 			const csrftoken = getToken('csrftoken');
-
-	</script>
+</script>
+	
 
 
 </head>
@@ -65,7 +65,7 @@
 			<a href="{% url 'cart' %}">
 			 <img  id="cart" src="{% static 'images/cart.png' %}" style="width:25px; display: inline-block; margin-left: 15px;">
 		   </a>
-		   <p id="cart-total">0</p>
+		   <p id="cart-total">{{cartItems}}</p>
 
 		   
 		   </div>

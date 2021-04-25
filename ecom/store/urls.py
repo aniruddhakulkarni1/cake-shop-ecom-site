@@ -8,7 +8,7 @@ urlpatterns = [
 	path("SignUp/",views.SignUp,name="SignUp"),
     path("SignUpDone/",views.SignUpDone,name="SignUpDone"),  
 	path('cart/', views.cart, name="cart"),
-	path('chekout/', views.chekout, name="chekout"),
-	path('updateItem/', views.updateItem, name="updateItem"),
+	path('checkout/', views.checkout, name="checkout"),
+	path('update_Item/', views.updateItem, name="update_Item"),
 
 ]
