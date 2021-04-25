@@ -1,0 +1,92 @@
+{% extends 'store/main.html' %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<h3>store</h3>
+
+<div class="row">
+  {% for product in products %}
+  <div class="col-lg-4">
+    <img class="thumbnail" src="{{product.imageURL}}">
+    <div class="box-element product">
+      <h6><strong>{{product.name}}</strong></h6>
+      <hr>
+    
+      <a href="{% url 'cart' %}" button type="button" class="btn btn-outline-success ">Buy Now</button></a>
+      <button data-product="{{product.id}}" data-action="add" class="btn btn-outline-success add-btn update-cart" >Add To Cart</button>
+      <h4 style="display: inline-block;float:right;"><strong>Rs.{{product.price|floatformat:2}}</strong></h4>
+
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock content %}
+
+ 
+<!-- <div class="container my-3">
+    <h1 class="my-4 text-center"> Gifts</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+            <img src="{% static 'images/placeholder.png' %}" class="d-block w-100" alt="...">
+                
+                <div class="card-body">
+                  <p class="card-text">Product 1</p>
+                  <h3>Rs.500</h3>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <center><a href="{% url 'cart' %}" button type="button" class="btn btn-outline-success">Buy Now</button></a>
+                     <a href="{% url 'cart' %}"button type="button" class="btn btn-outline-success" > Add To Cart</button></a></center>
+                        
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="{% static 'images/choko2.jpg' %}" class="d-block w-100" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Product 2</p>
+                  <h3>Rs.500</h3>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <center><a href="{% url 'cart' %}" button type="button" class="btn btn-outline-success">Buy Now</button></a>
+                        <a href="{% url 'cart' %}"button type="button" class="btn btn-outline-success"> Add To Cart</button></a></center>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="{% static 'images/choko3.jpg' %}" class="d-block w-100" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Product 3</p>
+                  <h3 >Rs.500</h3>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                     <center><a href="{% url 'cart' %}" button type="button" class="btn btn-outline-success">Buy Now</button></a>
+                        <a href="{% url 'cart' %}"button type="button" class="btn btn-outline-success" > Add To Cart</button></a></center>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div> -->
+  
+
+
+
+
+
+
+
